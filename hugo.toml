@@ -1,0 +1,59 @@
+title = "The Computer Whizz"
+baseURL = 'https://kostek.uk/computer-whizz'
+
+locale = 'en-gb'
+
+defaultContentLanguage = "en-gh"
+
+ignoreErrors = ["additional-script-loading-error"]
+
+theme  "hugo-blog-awesome"
+
+# TODO Enable google analytics 4
+# [services]
+#   [services.googleAnalytics]
+#     id = '' # G-MEASUREMENT_ID
+
+[markup]
+    [markup.highlight]
+        noClasses = false
+    [markup.goldmark.renderer]
+        unsafe = true
+        [markup.tableOfContent]
+            startLevel = 2 # ToC starts from H2
+            endLevel = 4 # ToC ends at H4
+            ordered = false
+
+[Languages.en-gb]
+    label = "English"
+    locale = "en-gb"
+    contentDir = "content/en"
+    weight = 1
+
+[Languages.en-gb.params]
+    sitename = "The Computer Whizz"
+    defaultColor = "dark" # set color mode: dark, light, auto
+    description = "Personal posts exploring Computer Science and Mathematics."
+    mainSections = ['posts']
+    toc = true # set to false to disable table of contents 'globally'
+    tocOpen = false # set to true to open table of contents by default
+    goToTop = true # set to false to disable 'go to top' button
+    additionalScripts = ['js/custom.js', 'js/custom-2.js']
+    dateFormat = "" # date format used to show dates on various pages. If nothing is specified, then "2 Jan 2006" format is used.
+    rssFeedDescription = "summary" # available options: 1) summary 2) full
+
+[Languages.en-gb.params.author]
+    avatar = "avatar.jpg" # put the file in assets folder; also ensure that image has same height and width
+    # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
+    intro = "The Computer Whizz"
+    name = "Sidharth R"
+    description = "A fast, minimalistic Hugo theme with light and dark mode support, for running a personal site or blog."
+
+
+[Languages.en-gb.params.webmanifest]
+    name = "The Computer Whizz" # will use "params.sitename" or "title" by default
+    short_name = "The Computer Whizz" # same as name
+    start_url = "/computer-whizz" # will use homepage url by default
+    theme_color = "#434648" # default is "#434648" (base color of text). Also will override html `<meta name="theme-color" />`
+    background_color = "#fff" # by default depend on "params.defaultColor" for "light" or "auto" will be set to "#fff" for dark will be "#131418" (color of dark mode background)
+    display = "standalone"
