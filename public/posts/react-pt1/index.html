@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/computer-whizz/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=computer-whizz/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">React pt. 1: The Footwork | The Computer Whizz</title>
+<meta property="og:title" content="React pt. 1: The Footwork | The Computer Whizz" />
+<meta name="twitter:title" content="React pt. 1: The Footwork | The Computer Whizz" />
+<meta itemprop="name" content="React pt. 1: The Footwork | The Computer Whizz" />
+<meta name="application-name" content="React pt. 1: The Footwork | The Computer Whizz" />
+<meta property="og:site_name" content="The Computer Whizz" />
+
+<meta name="description" content="Personal posts exploring Computer Science and Mathematics.">
+<meta itemprop="description" content="Personal posts exploring Computer Science and Mathematics." />
+<meta property="og:description" content="Personal posts exploring Computer Science and Mathematics." />
+<meta name="twitter:description" content="Personal posts exploring Computer Science and Mathematics." />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/computer-whizz/posts/react-pt1/" title="English" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2026-08-11T09:26:15&#43;0100 />
+    <meta property="article:published_time" content=2026-08-11T09:26:15&#43;0100 />
+    <meta property="og:url" content="http://localhost:1313/computer-whizz/posts/react-pt1/" />
+
+    
+    <meta property="og:article:author" content="Sidharth R" />
+    <meta property="article:author" content="Sidharth R" />
+    <meta name="author" content="Sidharth R" />
+    
+    
+
+    
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "React pt. 1: The Footwork",
+        "author": {
+        "@type": "Person",
+        "name": "Sidharth R"
+        },
+        "datePublished": "2026-08-11",
+        "description": "",
+        "wordCount":  1429 ,
+        "mainEntityOfPage": "http://localhost:1313/computer-whizz/posts/react-pt1/",
+        "dateModified": "2026-08-11",
+        "image": {
+        "@type": "ImageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "The Computer Whizz"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.162.1">
+
+    
+    <meta property="og:url" content="http://localhost:1313/computer-whizz/posts/react-pt1/">
+	<meta property="og:site_name" content="The Computer Whizz">
+	<meta property="og:title" content="React pt. 1: The Footwork">
+	<meta property="og:description" content="Next Post –&gt;
+I have to say straight away that i absolutely hate React, Vue, and Angular. There has to be a better solution for responsive UI/UX design than cramming everything into javascript. Javascript in itself is a mess with library updates every 3 minutes, and so. many. security issues.
+That said, React is the de-facto standard in website design	, so it is useful to master it. And that is what i am planning to do as i read through the book Learning React and make a full guide for you.
+My last computer science post is a massive monolithic creature, so let us jump straight in.">
+	<meta property="og:locale" content="en_gb">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-08-11T09:26:15+01:00">
+		<meta property="article:modified_time" content="2026-08-11T09:26:15+01:00">
+
+
+    
+    
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="React pt. 1: The Footwork">
+	<meta name="twitter:description" content="Next Post –&gt;
+I have to say straight away that i absolutely hate React, Vue, and Angular. There has to be a better solution for responsive UI/UX design than cramming everything into javascript. Javascript in itself is a mess with library updates every 3 minutes, and so. many. security issues.
+That said, React is the de-facto standard in website design	, so it is useful to master it. And that is what i am planning to do as i read through the book Learning React and make a full guide for you.
+My last computer science post is a massive monolithic creature, so let us jump straight in.">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/computer-whizz/posts/react-pt1/">
+    <link href="/computer-whizz/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/computer-whizz/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/computer-whizz/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/computer-whizz/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/computer-whizz/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/computer-whizz/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/computer-whizz/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/computer-whizz/site.webmanifest">
+
+<meta name="msapplication-config" content="/computer-whizz/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+    <meta name="color-scheme" content="light dark">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/computer-whizz/icons/favicon.svg">
+
+    
+    
+</head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/computer-whizz/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/computer-whizz/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/computer-whizz/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">React pt. 1: The Footwork</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2026-08-11T09:26:15&#43;01:00" itemprop="datePublished"> 11 Aug 2026 </time>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-theory">The Theory</a></li>
+    <li><a href="#working-with-react">Working With React</a></li>
+    <li><a href="#jsx">JSX</a></li>
+    <li><a href="#hello-world">Hello World</a></li>
+    <li><a href="#components">Components</a></li>
+    <li><a href="#components-with-attributes">Components With Attributes</a></li>
+    <li><a href="#css--styling">CSS &amp; Styling</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <p><a href="https://themindpalace.bearblog.dev/react-pt2-more-on-components/">Next Post &ndash;&gt;</a></p>
+<p>I have to say straight away that i absolutely hate React, Vue, and Angular. There has to be a better solution for responsive UI/UX design than cramming everything into javascript. Javascript in itself is a mess with library updates every 3 minutes, and so. many. security issues.<br>
+That said, React is the de-facto standard in website design		, so it is useful to master it. And that is what i am planning to do as i read through the book <a href="https://www.amazon.co.uk/Learning-React-Kirupa-Chinnathambi/dp/0134546318">Learning React</a> and make a full guide for you.<br>
+My last computer science post is a massive monolithic creature, so let us jump straight in.</p>
+<p>You can try out the examples here at my repository: <a href="https://github.com/K0Stek122/React-Tutorial">GitHub/K0Stek122/React-Tutorial</a></p>
+<h2 id="the-theory">The Theory</h2>
+<p>There is definitely less theory than in other topics, but there is still a few things to know.<br>
+Old school websites will have separate pages for each topic. Imagine that you have a navigation bar. Each item that you click will take you to a separate website, and each time you do that, the whole page refreshes.<br>
+To make pages more responsive, new website design uses <strong>Single-Page App (SPA) Models</strong>. These models work by dynamically replacing the content of the page within one single page. Because it&rsquo;s dynamic, javascript is required.</p>
+<p>While this approach makes websites more responsive, it introduces three major issues:</p>
+<ol>
+<li>Keeping all the data in-sync is difficult. For example, every time you press a button in a navigation bar, the data you inputted into a search bar changes. Should the data stay? Or be deleted? How should it be deleted?</li>
+<li>DOM Manipulation is handled fully by React, and DOM Manipulation is very slow. Despite React optimisations, the websites still suffer from this limitation.</li>
+<li>Using templates becomes harder, since everything is a component.</li>
+</ol>
+<h2 id="working-with-react">Working With React</h2>
+<p>React works best when all of the elements on a web page are split into tiny <strong>components</strong>. Each component builds onto the previous one, creating a hierarchical network of them.<br>
+Think of them like tiny classes.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">                             ┌──────────────┐                                         
+</span></span><span class="line"><span class="cl">                             │Main Component│                                         
+</span></span><span class="line"><span class="cl">                          ┌──┴──────────────┴────┐                                    
+</span></span><span class="line"><span class="cl">                          │                      │                                    
+</span></span><span class="line"><span class="cl">                  ┌───────▼───────┐      ┌───────▼───────┐                            
+</span></span><span class="line"><span class="cl">                  │Child Component│      │Child Component│                            
+</span></span><span class="line"><span class="cl">          ┌───────┴───────────────┴───┬──┴───────────────┴───────────────┐            
+</span></span><span class="line"><span class="cl">          │                           │                                  │            
+</span></span><span class="line"><span class="cl">          │                           │                                  │            
+</span></span><span class="line"><span class="cl">┌─────────▼─────────────┐  ┌──────────▼────────────┐         ┌───────────▼───────────┐
+</span></span><span class="line"><span class="cl">│Smaller Child Component│  │Smaller Child Component│         │Smaller Child Component│
+</span></span><span class="line"><span class="cl">└───────────────────────┘  └───────────────────────┘         └───────────────────────┘
+</span></span></code></pre></div><p>It is common for those hierarchies to span up-to even 10 sub-components. It&rsquo;s also important to <em>not overdo this</em>. Too many components will lead to the code being completely unreadable, and javascript is already barely readable without React.</p>
+<h2 id="jsx">JSX</h2>
+<p>React merges javascript and html, it does so using a &ldquo;language&rdquo; called <strong>JSX</strong>. JSX allows converting between javascript and html markup. We will omit how JSX works in detail for now.</p>
+<p>React allows you to write JSX, which looks like HTML but is actually JavaScript:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">	<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;h2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;I am a man because i err&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">),</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;#container2&#34;</span><span class="p">));</span>
+</span></span></code></pre></div><p>This does the exact same thing as <code>&lt;h2&gt;I am a man because i err&lt;/h2&gt;</code></p>
+<h2 id="hello-world">Hello World</h2>
+<p>Before we start, there is one more thing. In a real-world environment, you would use node.js and debug the website there. And only then host it finished. However for debugging purposes and for simplicity we are going to use a <a href="https://en.wikipedia.org/wiki/Content_delivery_network">Content Delivery Network</a>.</p>
+<p>Let&rsquo;s start with the simplest example we can make.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>React<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://unpkg.com/react@18/umd/react.development.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span> <span class="c">&lt;!--This is the main React Library--&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://unpkg.com/react-dom@18/umd/react-dom.development.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span> <span class="c">&lt;!--This is the library to interact with .html and .css--&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span> <span class="c">&lt;!--This is the library to convert JSX to JS, It is crucial--&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;container2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/babel&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="nx">World</span><span class="o">!&lt;</span><span class="err">/h1&gt;,</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;#container&#34;</span><span class="p">)</span> <span class="c1">//Notice how after every ReacDOM.render() you will put this line, to notify where the element should be.
+</span></span></span><span class="line"><span class="cl">            <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;h2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;I am a man because i err&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">),</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;#container2&#34;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>First, we use CDN to get the react library and react-dom. as well as <strong>babel-core</strong>. babel-core is a library that is used to convert between JSX and html, normally you would do this in node.js, but for learning, we are just going to import it directly into html.</p>
+<p>Let us focus on the <code>&lt;script type=&quot;text/babel&quot;&gt;</code>. We specify that babel has to be used, and it is followed by a ReactDOM.render(). This function is what will actually display stuff onto the screen. We then specify that we want a header size 2 to be displayed.<br>
+Pretty simple. Originally when i started i though it is going to be way more painful to get started with this.</p>
+<h2 id="components">Components</h2>
+<p>The problem with this hello world code is that it completely ignores what React is about. React is about components, you are supposed to deal with small modular pieces of front-end display. To do this, components are utilised.<br>
+This next example has a simple Hello World component. I have split the code into .js and .html for convenience.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>React Components<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://unpkg.com/react@15.3.2/dist/react.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span> <span class="c">&lt;!--This is the main React Library--&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://unpkg.com/react-dom@15.3.2/dist/react-dom.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span> <span class="c">&lt;!--This is the library to interact with .html and .css--&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span> <span class="c">&lt;!--This is the library to convert JSX to JS--&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/babel&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;./scripts.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>This is the html, nothing too complex. But look at that javascript, you better sit down for this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">HelloWorld</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span> <span class="c1">//By itself it is just an empty object.
+</span></span></span><span class="line"><span class="cl">    <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="c1">//This is a MANDATORY member of React Class.
+</span></span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="nx">From</span> <span class="nx">a</span> <span class="nx">Component</span><span class="o">!&lt;</span><span class="err">/p&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//IMPORTANT! Here i am using an old version of React, since the function createClass is deprecated in newer versions. We&#39;ll get to that soon.
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">HelloWorld</span><span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">HelloWorld</span><span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">HelloWorld</span><span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">HelloWorld</span><span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">HelloWorld</span><span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">HelloWorld</span><span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="err">/div&gt;,</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;#container&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></div><p>we use React.createClass (<em>which is a deprecated class by now but we will ignore that</em>).<br>
+Yes, you call your own &ldquo;html tags&rdquo; using <code>&lt;HelloWorld/&gt;</code>, I know it&rsquo;s insane; when i first looked at this i almost had a stroke.<br>
+Let&rsquo;s ignore the complete insanity that this code is, and focus on the component itself. the <code>render: function()</code> is a mandatory element of this object. and in <code>return ();</code> we specify the html that we want to return. Ignoring the fact that this code is bollocks, it&rsquo;s quite a handy tool to be able to create your own html tags.</p>
+<h2 id="components-with-attributes">Components With Attributes</h2>
+<p>Not only can you make your own components, but you can add your own parameters to them:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">Buttonify</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">type</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">behaviour</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">children</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">Buttonify</span> <span class="nx">behaviour</span><span class="o">=</span><span class="s2">&#34;Submit&#34;</span><span class="o">&gt;</span><span class="nx">Send</span> <span class="nx">Data</span><span class="o">&lt;</span><span class="err">/Buttonify&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">Buttonify</span> <span class="nx">behaviour</span><span class="o">=</span><span class="s2">&#34;Submit&#34;</span><span class="o">&gt;</span><span class="nx">Send</span> <span class="nx">Photos</span><span class="o">&lt;</span><span class="err">/Buttonify&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">Buttonify</span> <span class="nx">behaviour</span><span class="o">=</span><span class="s2">&#34;Submit&#34;</span><span class="o">&gt;</span><span class="nx">Send</span> <span class="nx">Something</span> <span class="nx">Else</span><span class="o">&lt;</span><span class="err">/Buttonify&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="err">/div&gt;,</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;#container&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></div><ul>
+<li><strong>Remember</strong> that <code>this.props.behaviour</code> can be used in every React component. The code is quite self-explanatory so please take a moment see what is actually happening. The result of this code are three buttons named &ldquo;Send Data&rdquo;, &ldquo;Send Photos&rdquo;, &ldquo;Send Something Else&rdquo;.</li>
+</ul>
+<h2 id="css--styling">CSS &amp; Styling</h2>
+<p>React kind of remakes CSS in a new <em>javascript</em> way, which means that it is going to be just as insane:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">Letter</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nx">styles</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">//Notice that properties which had a dash (-) in the middle are now CamelCase.
+</span></span></span><span class="line"><span class="cl">            <span class="nx">padding</span><span class="o">:</span> <span class="s2">&#34;10em&#34;</span><span class="p">,</span> <span class="c1">//em suffix is in commas.
+</span></span></span><span class="line"><span class="cl">            <span class="nx">margin</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="c1">//px suffix is omitted and is added automatically.
+</span></span></span><span class="line"><span class="cl">            <span class="nx">backgroundColor</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">bgcolor</span> <span class="o">?</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">bgcolor</span> <span class="o">:</span> <span class="s2">&#34;#ff0000&#34;</span><span class="p">,</span> <span class="c1">//if bgcolor is set, set it to bgcolor, otherwise, set it to red.
+</span></span></span><span class="line"><span class="cl">            <span class="nx">color</span><span class="o">:</span> <span class="s2">&#34;#333&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">display</span><span class="o">:</span> <span class="s2">&#34;inline-block&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">fontFamily</span><span class="o">:</span> <span class="s2">&#34;Monospace&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">fontSize</span><span class="o">:</span> <span class="mi">32</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">textAlign</span><span class="o">:</span> <span class="s2">&#34;center&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">}</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">children</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">Letter</span> <span class="nx">bgcolor</span><span class="o">=</span><span class="s2">&#34;#00ff00&#34;</span><span class="o">&gt;</span><span class="nx">A</span><span class="o">&lt;</span><span class="err">/Letter&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">Letter</span><span class="o">&gt;</span><span class="nx">E</span><span class="o">&lt;</span><span class="err">/Letter&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">Letter</span><span class="o">&gt;</span><span class="nx">I</span><span class="o">&lt;</span><span class="err">/Letter&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">Letter</span><span class="o">&gt;</span><span class="nx">O</span><span class="o">&lt;</span><span class="err">/Letter&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">Letter</span><span class="o">&gt;</span><span class="nx">U</span><span class="o">&lt;</span><span class="err">/Letter&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="err">/div&gt;,</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;#container&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></div><p>One thing to notice is that you do not need to add px to the end of integers. They are appended automatically unless specified otherwise.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In the next part we will deal with the main problem in react, which is passing <code>this.props.behaviour</code> down the hierarchy of components, as detailed before:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">                             ┌──────────────┐                                         
+</span></span><span class="line"><span class="cl">                             │Main Component│                                         
+</span></span><span class="line"><span class="cl">                          ┌──┴──────────────┴────┐                                    
+</span></span><span class="line"><span class="cl">                          │                      │                                    
+</span></span><span class="line"><span class="cl">                  ┌───────▼───────┐      ┌───────▼───────┐                            
+</span></span><span class="line"><span class="cl">                  │Child Component│      │Child Component│                            
+</span></span><span class="line"><span class="cl">          ┌───────┴───────────────┴───┬──┴───────────────┴───────────────┐            
+</span></span><span class="line"><span class="cl">          │                           │                                  │            
+</span></span><span class="line"><span class="cl">          │                           │                                  │            
+</span></span><span class="line"><span class="cl">┌─────────▼─────────────┐  ┌──────────▼────────────┐         ┌───────────▼───────────┐
+</span></span><span class="line"><span class="cl">│Smaller Child Component│  │Smaller Child Component│         │Smaller Child Component│
+</span></span><span class="line"><span class="cl">└───────────────────────┘  └───────────────────────┘         └───────────────────────┘
+</span></span></code></pre></div><p>This problem occurs when there is a lot of child components. It becomes an issue to pass different variables down the hierarchy. But we will tackle this in the next part.</p>
+<p>While a <em>bit</em> dated, like everything in the javascript community, the book: <a href="https://www.amazon.co.uk/Learning-React-Kirupa-Chinnathambi/dp/0134546318">Learning React</a> is excellent. I can recommend it to anyone, and it is one of not many textbooks that i actually wanted to keep reading, since it explains everything in a fun way. I&rsquo;d recommend this to anyone trying to learn react.</p>
+<p>You can check out all the fully working projects on my <a href="https://github.com/K0Stek122/React-Tutorial">GitHub</a>, and try them on your own.</p>
+<p>Thank You for reading, and see you next time.</p>
+<p><a href="https://themindpalace.bearblog.dev/react-pt2-more-on-components/">Next Post &ndash;&gt;</a></p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+</div>
+    <small class="footer_copyright">
+        © 2026 Sidharth R.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/computer-whizz/js/main.js" ></script>
+
+    
+
+</body>
+</html>

@@ -3,16 +3,22 @@ baseURL = 'https://kostek.uk/computer-whizz'
 
 locale = 'en-gb'
 
-defaultContentLanguage = "en-gh"
+defaultContentLanguage = "en-gb"
 
 ignoreErrors = ["additional-script-loading-error"]
 
-theme  "hugo-blog-awesome"
+theme = "hugo-blog-awesome"
 
 # TODO Enable google analytics 4
 # [services]
 #   [services.googleAnalytics]
 #     id = '' # G-MEASUREMENT_ID
+
+[menu]
+    [[menu.main]]
+        name = "About"
+        url = "/about/"
+        weight = 1
 
 [markup]
     [markup.highlight]
@@ -27,13 +33,13 @@ theme  "hugo-blog-awesome"
 [Languages.en-gb]
     label = "English"
     locale = "en-gb"
-    contentDir = "content/en"
+    contentDir = "content/"
     weight = 1
 
 [Languages.en-gb.params]
     sitename = "The Computer Whizz"
     defaultColor = "dark" # set color mode: dark, light, auto
-    description = "Personal posts exploring Computer Science and Mathematics."
+    description = "A blog with all things computers! Expect C/C++, Rust, Python, JavaScript, Cyber Security, and Embedded Programming."
     mainSections = ['posts']
     toc = true # set to false to disable table of contents 'globally'
     tocOpen = false # set to true to open table of contents by default
@@ -47,7 +53,7 @@ theme  "hugo-blog-awesome"
     # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
     intro = "The Computer Whizz"
     name = "Sidharth R"
-    description = "A fast, minimalistic Hugo theme with light and dark mode support, for running a personal site or blog."
+    description = "A blog with all things computers! Expect C/C++, Rust, Python, JavaScript, Cyber Security, and Embedded Programming."
 
 
 [Languages.en-gb.params.webmanifest]

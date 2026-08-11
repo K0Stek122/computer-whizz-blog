@@ -1,0 +1,25 @@
+
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/computer-whizz/about/</loc>
+    <lastmod>2026-08-11T09:31:52+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/computer-whizz/</loc>
+    <lastmod>2026-08-11T09:31:52+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/computer-whizz/posts/</loc>
+    <lastmod>2026-08-11T09:30:22+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/computer-whizz/posts/react-pt2/</loc>
+    <lastmod>2026-08-11T09:30:22+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/computer-whizz/posts/react-pt1/</loc>
+    <lastmod>2026-08-11T09:26:15+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/computer-whizz/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/computer-whizz/tags/</loc>
+  </url>
+</urlset>
