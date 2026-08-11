@@ -1,6 +1,6 @@
 +++
 date = '2026-08-19T09:30:22+01:00'
-draft = true
+draft = false
 title = 'React pt. 2: More on components'
 +++
 [<-- Previous Post](https://themindpalace.bearblog.dev/react-pt1-the-footwork/)
