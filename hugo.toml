@@ -49,7 +49,7 @@ theme = "hugo-blog-awesome"
     rssFeedDescription = "summary" # available options: 1) summary 2) full
 
 [Languages.en-gb.params.author]
-    avatar = "avatar.jpg" # put the file in assets folder; also ensure that image has same height and width
+    avatar = "avatar.jpeg" # put the file in assets folder; also ensure that image has same height and width
     # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
     intro = "The Computer Whizz"
     name = "Sidharth R"
