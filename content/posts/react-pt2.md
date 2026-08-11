@@ -1,5 +1,5 @@
 +++
-date = '2026-08-11T09:30:22+01:00'
+date = '2026-08-19T09:30:22+01:00'
 draft = true
 title = 'React pt. 2: More on components'
 +++
